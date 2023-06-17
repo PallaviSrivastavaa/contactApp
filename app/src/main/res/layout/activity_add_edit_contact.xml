@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/noteEt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige"
+    tools:context=".AddEditContact">
+
+    <LinearLayout
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileIv"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_person_24"
+            app:civ_border_color="@color/magenta"
+
+
+            app:civ_border_width="@dimen/_1sdp" />
+
+        <EditText
+            android:id="@+id/nameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/background_input_field"
+            android:drawableStart="@drawable/baseline_text_fields_24"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:padding="@dimen/_10sdp"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/phoneEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/background_input_field"
+            android:drawableStart="@drawable/baseline_phone_24"
+
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:padding="@dimen/_10sdp"
+            android:textColorHint="@color/black"
+
+            />
+
+        <EditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/background_input_field"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="Email address"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/_10sdp"
+            android:textColorHint="@color/black" />
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/fab"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="172dp"
+        android:layout_marginBottom="117dp"
+        android:backgroundTint="@color/magenta"
+        android:contentDescription="TODO"
+        android:elevation="@dimen/_5sdp"
+        android:text="add"
+        android:textColor="@color/daco"
+
+        app:backgroundTint="@color/magenta" />
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:background="@color/magenta">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/back"
+            android:layout_width="53dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/baseline_arrow_back_24"
+            android:backgroundTint="@color/black"
+            android:clickable="false"
+            android:paddingLeft="@dimen/_49sdp"
+            android:text=""
+            android:visibility="visible"
+            app:strokeColor="#0B0A0A" />
+    </RelativeLayout>
+
+</RelativeLayout>
