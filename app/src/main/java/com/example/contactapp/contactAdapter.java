@@ -79,7 +79,8 @@ public class contactAdapter extends RecyclerView.Adapter<contactAdapter.ContactV
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent(context,Activity_Contact_details.class);
-                intent.putExtra("contactId",id);
+                intent.putExtra("contactId",id);/*The putExtra() method is used to add extra data to the intent. In this case,
+                it adds a string value with the key "contactId" and the value of the variable id*/
                 context.startActivity(intent);
 
             }

@@ -1,5 +1,5 @@
 package com.example.contactapp;
-
+/*The ModelContact class can be used as a blueprint to create contact objects and store their information*/
 public class ModelContact {
     private String id,name,phone,email,addedTime,updatedTime;
 

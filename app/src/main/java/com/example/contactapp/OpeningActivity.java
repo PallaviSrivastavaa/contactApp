@@ -26,7 +26,9 @@ public class OpeningActivity extends AppCompatActivity {
         textView=findViewById(R.id.textView);
         TranslateAnimation translateAnimation = new TranslateAnimation(0, 0, -100, 0);
         translateAnimation.setDuration(3000); // Duration of the translation animation in milliseconds
-        translateAnimation.setInterpolator(new AccelerateDecelerateInterpolator());
+        translateAnimation.setInterpolator(new AccelerateDecelerateInterpolator());/*It creates a TranslateAnimation object
+        that animates the textView by translating it from -100 pixels on the Y-axis to 0 pixels over a duration of 3000 milliseconds (3 seconds).
+         The animation uses an AccelerateDecelerateInterpolator to give it a smooth acceleration and deceleration effect*/
 
         textView.startAnimation(translateAnimation);
 
@@ -38,9 +40,10 @@ public class OpeningActivity extends AppCompatActivity {
             public void run() {
                 // Start the main activity
                 Intent intent = new Intent(OpeningActivity.this, MainActivity.class);
-                startActivity(intent);
+                startActivity(intent);//intent is a messaging object which is used to request any component from another activity
 
             }
-        }, SPLASH_DURATION);
+        }, SPLASH_DURATION);/*It uses a Handler to post a delayed task that will run after a specified duration (SPLASH_DURATION).
+         In this case, the delay is set to 5000 milliseconds (5 seconds).*/
     }
     }

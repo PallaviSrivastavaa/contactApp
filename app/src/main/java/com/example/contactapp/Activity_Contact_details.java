@@ -67,9 +67,11 @@ public class Activity_Contact_details extends AppCompatActivity {
         String selectQuery = "SELECT * FROM " + Constants.TABLE_NAME + " WHERE " + Constants.C_ID + " = '" + id + "'";
 
         SQLiteDatabase db=dbHelper.getReadableDatabase();
-        Cursor cursor=db.rawQuery(selectQuery,null);
-        if(cursor.moveToFirst()){
-            do{
+        Cursor cursor=db.rawQuery(selectQuery,null);//Cursor object that points to the result set.
+        if(cursor.moveToFirst())//The code checks if the cursor has any rows by calling moveToFirst(). If it returns true, it means there is at least one matching row.
+             {
+            do{//inside the do-while loop, the values of each column are retrieved from the cursor using the getColumnIndexOrThrow() method.
+                // The column names are obtained from Constants class constants
 
                 String name=  ""+cursor.getString(cursor.getColumnIndexOrThrow(Constants.C_NAME));
                 String phone=""+cursor.getString(cursor.getColumnIndexOrThrow(Constants.C_PHONE));

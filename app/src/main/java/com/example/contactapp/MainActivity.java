@@ -64,7 +64,10 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     protected void onResume(){
-        super.onResume();
+        super.onResume();/*The onResume method is part of the Android activity lifecycle and is commonly
+        used to perform actions that need to happen when the activity is resumed,
+        such as updating UI elements,
+        refreshing data, registering for event listeners, or resuming animations or media playback.*/
         loadData();//refresh data...the Activity class provides a core set of six callbacks: onCreate(), onStart(), onResume(), onPause(), onStop(), and onDestroy()
     }
 
